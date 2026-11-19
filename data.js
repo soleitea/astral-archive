@@ -1,0 +1,33 @@
+const characters = [
+ {name:"Acheron",element:"Lightning",path:"العدم",rarity:5,world:"Penacony",desc:"ساموراي غامضة تسير في درب Nihility، وتخفي خلف هدوئها ماضياً مثقلاً بالأسرار.",detail:"Acheron هي مسافرة غامضة تقدّم نفسها كـ Galaxy Ranger. ترتبط قصتها بمفهوم الذاكرة والفقد وبالطريق الذي تسلكه نحو نهايتها الخاصة.",skill:"تعتمد آلية لعبها على تجميع نقاط Slashed Dream وتفعيل نهايتها القتالية لإطلاق ضربات متتابعة.",img:""},
+ {name:"Kafka",element:"Lightning",path:"العدم",rarity:5,world:"Stellaron Hunters",desc:"عضوة في Stellaron Hunters، هادئة وواثقة وتؤدي دوراً محورياً في خطط Elio.",detail:"Kafka واحدة من Stellaron Hunters. تُعرف بهدوئها وقدرتها على التحكم بسير المواقف، كما ترتبط مباشرة ببداية رحلة Trailblazer.",skill:"تُفعّل ضرر الـ Damage over Time على الأعداء وتساعد على تفجير تأثيراته.",img:""},
+ {name:"Dan Heng • Imbibitor Lunae",element:"Imaginary",path:"الدمار",rarity:5,world:"Xianzhou Luofu",desc:"الهيئة الحقيقية لقوة Dan Heng المرتبطة بإرث Vidyadhara.",detail:"تكشف هذه الهيئة جانباً من ماضي Dan Heng وعلاقته بإرث Imbibitor Lunae وبأحداث Xianzhou Luofu.",skill:"يعزز هجماته الأساسية عبر استهلاك نقاط المهارة لرفع قوة الهجوم.",img:""},
+ {name:"March 7th",element:"Ice",path:"الحفظ",rarity:4,world:"Astral Express",desc:"رفيقة طاقم القطار التي استيقظت بلا ذكريات عن ماضيها.",detail:"عُثر على March 7th داخل جليد فضائي، ومن هنا جاء اسمها. انضمت إلى طاقم Astral Express وتبحث عن حقيقة ماضيها.",skill:"تقدم درعاً للحلفاء وتستطيع تنفيذ هجمات متابعة في ظروف معينة.",img:""},
+ {name:"Himeko",element:"Fire",path:"الذكاء",rarity:5,world:"Astral Express",desc:"عالمة ومغامرة أعادت إصلاح Astral Express وانطلقت في رحلة النجوم.",detail:"وجدت Himeko القطار Astral Express وهو معطل في موطنها، فعملت على إصلاحه وأعادت فتح طريق الرحلات بين العوالم.",skill:"تتخصص في هجمات المنطقة وتفعيل Follow-up Attack عند استيفاء شروط كسر الأعداء.",img:""},
+ {name:"Welt",element:"Imaginary",path:"العدم",rarity:5,world:"Astral Express",desc:"رجل هادئ يحمل خبرة واسعة وتاريخاً يتجاوز حدود هذا العالم.",detail:"Welt Yang شخصية ذات ماضٍ طويل ومعقد، وانتقل إلى رحلة Astral Express حاملاً خبرته ومسؤوليته تجاه رفاقه.",skill:"يبطئ الأعداء ويقلل سرعتهم ويقدم تحكماً ميدانياً.",img:""},
+ {name:"Aventurine",element:"Imaginary",path:"الحفظ",rarity:5,world:"IPC",desc:"مدير تنفيذي في قسم الاستثمار الاستراتيجي لدى IPC، يراهن دائماً على الاحتمالات.",detail:"Aventurine أحد Stonehearts في IPC. ترتبط قصته بالمخاطرة والرهان والحرية، وتظهر جوانب ماضيه خلال أحداث Penacony.",skill:"يوفر دروعاً متجددة ويعتمد على نقاط الرهان لتفعيل هجمات متابعة.",img:""},
+ {name:"Sunday",element:"Imaginary",path:"الانسجام",rarity:5,world:"Penacony",desc:"شخصية محورية في أحداث Penacony، ترتبط بمفهوم النظام والحلم.",detail:"كان Sunday من أبرز الشخصيات المؤثرة في Penacony، وتتشابك رؤيته للنظام مع أحداث الحلم وقراراته المصيرية.",skill:"يدعم الحلفاء عبر تعزيز أدوارهم القتالية وتقديم مزايا مرتبطة بالطاقة والحركة.",img:""}
+];
+const lightCones = [
+ {name:"Along the Passing Shore",path:"العدم",rarity:5,desc:"Light Cone خاص بـ Acheron. يمنح زيادة في ضرر CRIT DMG، ويرتبط تأثيره بتطبيق debuff على العدو وتعزيز الضرر الذي يتلقاه."},
+ {name:"Patience Is All You Need",path:"العدم",rarity:5,desc:"Light Cone مرتبط بـ Kafka. يزيد السرعة ويعزز الضرر، ويمكن أن يطبق حالة Erode على الأعداء."},
+ {name:"In the Night",path:"الصيد",rarity:5,desc:"يزيد معدل CRIT، ويعزز ضرر المهارة والنهاية وفقاً لسرعة الشخصية."},
+ {name:"But the Battle Isn't Over",path:"الانسجام",rarity:5,desc:"يعزز استعادة الطاقة، ويرفع ضرر الحليف التالي بعد استخدام النهاية وفق شروط التأثير."},
+ {name:"Moment of Victory",path:"الحفظ",rarity:5,desc:"يزيد الدفاع ومعدل إصابة الشخصية، ويعزز الدفاع عند تعرضها للهجوم."},
+ {name:"Night on the Milky Way",path:"الذكاء",rarity:5,desc:"يزيد الهجوم بحسب عدد الأعداء في ساحة المعركة، ويعزز الضرر بعد كسر ضعف عدو."}
+];
+const lore = {
+ overview:{title:"مقدمة الرحلة",body:`<p>تدور أحداث Honkai: Star Rail في كون تتقاطع فيه الحضارات تحت تأثير كيانات كونية تُعرف باسم <b> Aeons </b>. كل Aeon يجسد Path أو مساراً فلسفياً، وتتبع الكائنات والفصائل هذه المسارات بدرجات مختلفة.</p><p>تبدأ رحلة Trailblazer على متن محطة Herta الفضائية، حيث تؤدي حادثة Stellaron إلى لقاء طاقم Astral Express والانطلاق في رحلة بين العوالم.</p><div class="spoiler">حرق: يُزرع Stellaron داخل جسد Trailblazer بواسطة Kafka وSilver Wolf في بداية الأحداث، ليصبح ذلك نقطة الانطلاق الأساسية للقصة.</div>`},
+ stellaron:{title:"الـ Stellaron",body:`<p>تُعرف Stellarons أحياناً باسم Seeds of Disaster، وهي ظواهر غامضة شديدة الخطورة قادرة على تغيير مصير الكواكب والحضارات.</p><p>تسعى جهات متعددة إلى فهمها أو احتوائها أو استغلال قوتها، وتُعد من أهم محركات الصراع في القصة.</p><div class="spoiler">حرق: يحمل Trailblazer أحد هذه الأجسام بداخله، وتصبح علاقته به وبالجهات التي زرعته محوراً مستمراً في أحداث اللعبة.</div>`},
+ express:{title:"Astral Express",body:`<p>قطار فضائي يسافر عبر النجوم على مسارات الـ Trailblaze. أعادته Himeko إلى العمل، ويقوده مسافرون يزورون عوالم مختلفة ويساعدون في حل أزماتها.</p><p>من أبرز أفراد الطاقم: Himeko وWelt وDan Heng وMarch 7th وTrailblazer، إلى جانب Pom-Pom المسؤول عن القطار.</p>`},
+ aeons:{title:"الآيونز والمسارات",body:`<p>الـ Aeons كيانات كونية مرتبطة بمفاهيم كبرى تُسمى Paths. من أمثلتها Nanook للدمار، وNous للذكاء، وQlipoth للحفظ، وXipe للانسجام، وIX للعدم.</p><p>المسارات ليست مجرد تصنيفات قتالية؛ بل تعكس أفكاراً ومعتقدات تؤثر في الحضارات وأتباعها.</p>`},
+ worlds:{title:"العوالم الرئيسية",body:`<p><b>Herta Space Station:</b> محطة أبحاث تبدأ فيها رحلة Trailblazer.</p><p><b>Jarilo-VI:</b> عالم متجمد يعيش أزمة Stellaron وصراعاً اجتماعياً عميقاً.</p><p><b>The Xianzhou Luofu:</b> سفينة-عالم مرتبطة بتحالف Xianzhou وصراع الخلود والـ Abundance.</p><p><b>Penacony:</b> عالم الأحلام والاحتفالات، وتتشابك فيه الحقيقة مع طبقات الحلم والذاكرة.</p><div class="spoiler">حرق: تكشف أحداث Penacony عن تلاعبات متعددة بمفهوم الحلم والواقع، وعن دوافع Sunday ومخططه المرتبط بالنظام المثالي.</div>`}
+};
+const universe = [
+ ["✦","Astral Express","قطار يسافر بين العوالم على طريق Trailblaze، ويجمع طاقماً يسعى لاكتشاف الكون."],
+ ["◈","Stellaron Hunters","مجموعة غامضة تتبع خطط Elio، ويبدو أن أفرادها يتحركون وفق سيناريوهات مستقبلية."],
+ ["⬡","IPC","مؤسسة بين كوكبية ذات نفوذ اقتصادي وسياسي واسع، وتؤثر في عوالم كثيرة."],
+ ["☼","The Family","منظمة مرتبطة بـ Penacony ومفهوم الانسجام، ولها دور محوري في أحداث عالم الأحلام."],
+ ["✧","Genius Society","مجموعة من العقول الاستثنائية التي لفتت انتباه Nous، Aeon of Erudition."],
+ ["⌘","Xianzhou Alliance","تحالف سفن-عوالم يسعى لمواجهة آثار الخلود ومخاطر Abundance."]
+];
